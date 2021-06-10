@@ -1,0 +1,22 @@
+/*---------------------------\
+         DESKTOP
+\---------------------------*/
+
+body{
+//@imports
+//lib
+@import "./lib/variables";
+@import "./lib/mixins";
+@import "./lib/place-holders";
+//desktop-modules
+//Layout
+@import "./desktop-modules/header";
+@import "./desktop-modules/footer";
+/*--------------------------\
+           Global
+\--------------------------*/
+
+@include respond-to(900px) {
+
+}
+}
