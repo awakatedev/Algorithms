@@ -5,27 +5,28 @@
 //COLOURS
 //Global COLOURS
 $Global-purple: #540298;
-$Title-dark-gray: #0E0E0E;
 $Items-gray: #D1D1D1;
-
+$Just-white: #fff;//This is the colour for the buttons text and Titles on Dark mode
+$Btn-background: linear-gradient(0.25turn, #8745BE, #6F06C6);
 //light theme COLOURS
+$Title-dark-gray: #0E0E0E;
 $Text-light-gray: #525252;
 $Background-light-base: #E5E5E5;
-$Background-light-footer: #C4C4C4;
+$Background-light-darkerBase: #C4C4C4;
 $Background-light-console: #1C1C1C;
 
 //dark theme COLOURS
 $Text-dark-gray: #CFCFCF;
 $Background-dark-base: #070617;
-$Background-light-footer: #01000E;
-$Background-light-console: #1C1A25;
+$Background-dark-darkerBase: #01000E;
+$Background-dark-console: #040212;
 
 //FONTS
 $Base-font: 'Lato', sans-serif;
 
 //FONT size
 //Titles
-$H1-size: 4.5rem;
+$H1-size: 5rem;
 $H2-size: 4rem;
 $H3-size: 3.6rem;
 //Text
