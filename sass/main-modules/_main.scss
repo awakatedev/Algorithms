@@ -1,0 +1,50 @@
+.main {
+    width: 100vw;
+    margin: auto;
+    background-color: $Background-dark-base;
+
+    .hero {
+        @extend %box-spacing;
+
+        &__title {
+            font-size: $H1-size;
+            text-align: center;
+            margin: 0.5em 0 0.5em 0;
+        }
+        .search {
+            padding: 0 1em;
+            margin: 0 0 1rem 0;
+            width: 50%;
+            height: 4em;
+            border: none;
+            border-radius: 20px;
+        }
+        button {
+            @extend %button;
+            margin: 4em 0 1em 0;
+        }
+    }
+
+    .works {
+        @extend %box-spacing;
+        &__container {
+            text-align: center;
+            .works__title {
+                font-size: $H2-size;
+                margin-bottom: 1em;
+            }
+            .works__details {
+                font-size: $p-size;
+                color: $Items-gray;
+            }
+        }
+        button {
+            @extend %button;
+        }
+    }
+
+    .whatIs {
+        @extend %box-spacing;
+    }
+}
+

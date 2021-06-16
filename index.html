@@ -5,7 +5,7 @@
     <title>Merge-Sort</title>
 
   <!--LINKS-->
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="/css/desktop.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
@@ -19,24 +19,38 @@
   <body>
     <!--HEADER-->
     <header class="header">
-      <img class="logo" src="https://i.imgur.com/WcHX6ez.png" alt="logo for web">
+      <img class="logo logo--dark" src="https://i.imgur.com/NeWvOle.png" alt="logo for web dark">
       <!-- this tag is for dark mode, if you do not use delete -->
-      <!-- <img class="logo logo--dark" src="https://i.imgur.com/NeWvOle.png" alt="logo for web dark"> -->
-      <nav class="menu">
-        <ul class="menu__container">
-          <li><a href="#">How it works</a></li>
-          <li><a href="#">Merge Sort</a></li>
-          <li><a href="#">Fibonacci</a></li>
-        </ul>
+      <!-- <img class="logo" src="https://i.imgur.com/WcHX6ez.png" alt="logo for web"> -->
+      <input type="checkbox" class="menu-check" id="menu">
+      <div class="nav__container">
+        <nav class="menu">
+          <ul class="menu__container">
+            <li class="menu__container__item"><a href="#">How it works</a></li>
+            <li class="menu__container__item"><a href="#">Merge Sort</a></li>
+            <li class="menu__container__item"><a href="#">Fibonacci</a></li>
+          </ul>
+        </nav>
         <div class="checkbox">
-          <label class="checkbox__switch">
-            Theme
-            <input class="checkbox__input" type="checkbox">
+          <span class="checkbox__switch"> Theme </span>
+          <div class="checkbox__btn-swtich">
+            <input id="switch" class="checkbox__input" type="checkbox">
+            <label for="switch"> 
+              <div> </div>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="black-background"></div>
+      <div class="mobile-menu">
+          <label for="menu" class="lbl-menu">
+            <div class="spn1"></div>
+            <div class="spn2"></div>
+            <div class="spn3"></div>
           </label>
         </div>
-      </nav>
-      <i></i>
     </header>
+
     <main class="main">
       <div class="hero is--active">
         <h1 class="hero__title">Type random numbers and check  out  the magic!</h1>

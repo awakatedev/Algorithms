@@ -1,0 +1,28 @@
+/*----------------------------------\
+          %PLACE HOLERS
+ \---------------------------------*/
+
+ %button {
+    padding: 1em 3em;
+    background-color: $Global-purple;
+    color: $Items-gray;
+    border: none;
+    border-radius: 10px;
+ }
+
+ %title-concepts {
+
+ }
+
+%logo {
+    width: 150px;
+}
+
+%box-spacing {
+    width: 90%;
+    padding-top: 8em;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

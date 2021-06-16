@@ -1,3 +1,15 @@
+/*----------------------\
+        @imports
+\-----------------------*/
+//lib
+@import "./lib/variables";
+@import "./lib/mixins";
+@import "./lib/place-holders";
+//Layout
+@import "./main-modules/header";
+@import "./main-modules/main";
+@import "./main-modules/footer";
+
 /*---------------------------\
          MAIN
 \---------------------------*/
@@ -5,27 +17,15 @@
   margin: 0;
   padding: 0;
 }
+
 html{
   font-family: $Base-font;
   font-size: 62.5%;
 }
-body{
-//@imports
-//lib
-@import "./lib/variables";
-@import "./lib/mixins";
-@import "./lib/place-holders";
-//main-modules
-//Layout
-@import "./main-modules/header";
-@import "./main-modules/footer";
-/*--------------------------\
-           Global
-\--------------------------*/
 
 h1,
 h2,
 h3{
-  color: $$Text-light-gray;
+  color: $Text-light-gray;
 }
-}
+
