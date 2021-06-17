@@ -11,18 +11,26 @@
           %PLACE HOLERS
  \---------------------------------*/
 .main .works button, .main .hero button {
-  padding: 1em 3em;
+  font-size: 1.8rem;
+  padding: 1.2em 4em;
   background-color: #540298;
   color: #D1D1D1;
   border: none;
   border-radius: 10px;
 }
 
-.logo, header .logo {
+footer .team .member__data--details, .main .whatIs__container--details, .main .works__container .works__details {
+  font-size: 2.2rem;
+  color: #D1D1D1;
+  line-height: 3rem;
+  text-align: left;
+}
+
+footer .logo, header .logo {
   width: 150px;
 }
 
-.main .whatIs, .main .works, .main .hero {
+footer .team, .main .whatIs, .main .works, .main .hero {
   width: 90%;
   padding-top: 8em;
   margin: auto;
@@ -32,18 +40,24 @@
 }
 
 header {
-  display: flex;
+  width: 100vw;
   height: 80px;
-  padding: 0 2em;
+  background-color: #070617;
+  position: fixed;
+}
+header .header__container {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #070617;
+}
+header .logo {
+  padding: 0 1em;
 }
 header .nav__container {
   display: none;
-}
-header .mobile-menu {
-  padding: 0 2em;
 }
 header .mobile-menu .lbl-menu .spn1, header .mobile-menu .spn2, header .mobile-menu .spn3 {
   position: relative;
@@ -78,23 +92,20 @@ header .menu-check:checked ~ .mobile-menu .lbl-menu .spn3 {
 header .menu-check:checked ~ .nav__container {
   display: block;
   position: absolute;
-  padding: 5em 2em;
   top: 0;
-  bottom: 50%;
   left: 0;
   right: 0;
   text-align: center;
   background-color: #E5E5E5;
-  border-radius: 0 0 45% 45%;
-  z-index: 2;
+  border-radius: 0 0 35% 35%;
 }
 header .menu-check:checked ~ .nav__container .menu .menu__container {
   list-style: none;
   width: 80%;
-  margin: 8em auto;
+  margin: 6em auto 4em;
 }
 header .menu-check:checked ~ .nav__container .menu .menu__container__item {
-  padding: 5em 1em;
+  padding: 1em 0;
   background: #D1D1D1;
   border: none;
 }
@@ -107,13 +118,14 @@ header .menu-check:checked ~ .nav__container .menu .menu__container__item:last-c
 header .menu-check:checked ~ .nav__container .menu .menu__container__item a {
   text-decoration: none;
   color: #0E0E0E;
-  font-size: 3.5rem;
+  font-size: 2.2rem;
   font-weight: 400;
 }
 header .menu-check:checked ~ .nav__container .checkbox {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5em;
   z-index: 3;
 }
 header .menu-check:checked ~ .nav__container .checkbox .checkbox__btn-swtich {
@@ -121,36 +133,36 @@ header .menu-check:checked ~ .nav__container .checkbox .checkbox__btn-swtich {
   background-color: #D1D1D1;
   padding: 5px;
   border-radius: 50px;
-  width: 100px;
-  height: 50px;
+  width: 60px;
+  height: 30px;
 }
 header .menu-check:checked ~ .nav__container .checkbox .checkbox__btn-swtich label > div {
-  background-color: #080326;
+  background-color: #E5E5E5;
   width: 50%;
   height: 100%;
   border-radius: 50%;
   transition: all 700ms ease;
 }
 header .menu-check:checked ~ .nav__container .checkbox .checkbox__switch {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: 900;
-  margin-right: 40px;
+  margin-right: 30px;
 }
 header .menu-check:checked ~ .nav__container .checkbox .checkbox__input {
   display: none;
 }
 header .menu-check:checked ~ .nav__container .checkbox .checkbox__input:checked ~ label > div {
-  background-color: #E5E5E5;
-  transform: translate(50px);
+  background-color: #080326;
+  transform: translate(30px);
 }
-header .menu-check:checked ~ .black-background {
+header .menu-check:checked ~ .nav__container .black-background {
   position: absolute;
-  bottom: 0;
-  top: 25%;
+  bottom: -200%;
+  top: 0;
   left: 0;
   right: 0;
   background-color: #0E0E0E;
-  z-index: 1;
+  z-index: -1;
 }
 
 .main {
@@ -165,14 +177,14 @@ header .menu-check:checked ~ .black-background {
 }
 .main .hero .search {
   padding: 0 1em;
-  margin: 0 0 1rem 0;
-  width: 50%;
+  margin: 1em 0;
+  width: 70%;
   height: 4em;
   border: none;
   border-radius: 20px;
 }
 .main .hero button {
-  margin: 4em 0 1em 0;
+  margin: 3em 0 1em 0;
 }
 .main .works__container {
   text-align: center;
@@ -181,10 +193,78 @@ header .menu-check:checked ~ .black-background {
   font-size: 4rem;
   margin-bottom: 1em;
 }
-.main .works__container .works__details {
-  font-size: 2.5rem;
-  color: #D1D1D1;
+.main .works .code {
+  text-align: center;
+  margin: 2em 0 3em;
 }
+.main .works .code__title {
+  font-size: 2.3rem;
+  color: #525252;
+  margin-bottom: 1em;
+}
+.main .works .code__details {
+  font-size: 2.2rem;
+  color: #FF7C03;
+}
+.main .whatIs {
+  color: white;
+}
+.main .whatIs__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.main .whatIs__title--item {
+  font-size: 4rem;
+  border-bottom: 5px solid #540298;
+  margin: 0.2em;
+}
+.main .whatIs__container {
+  text-align: center;
+  margin: 2em 0 1em 0;
+}
+.main .whatIs__container--details {
+  margin-bottom: 1em;
+}
+.main .whatIs__container--code {
+  font-size: 2.2rem;
+  color: #FF7C03;
+}
+
+footer {
+  width: 100vw;
+  margin: auto;
+  background-color: #070617;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .team {
+  padding: 2em 0 2em 0;
+}
+footer .team .member {
+  margin: 1em 0 3em 0;
+  display: flex;
+  align-items: center;
+}
+footer .team .member__img {
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  margin-right: 30px;
+}
+footer .team .member__data--title {
+  font-size: 2.5rem;
+}
+footer .team .member__data--details {
+  margin: 0.3em 0 0.3em 0;
+}
+footer .team .member__data .socialMedia .fab {
+  color: white;
+  font-size: 2.3rem;
+  margin-right: 20px;
+}
+
 /*---------------------------\
          MAIN
 \---------------------------*/

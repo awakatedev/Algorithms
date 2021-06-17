@@ -13,38 +13,79 @@
         }
         .search {
             padding: 0 1em;
-            margin: 0 0 1rem 0;
-            width: 50%;
+            margin: 1em 0;
+            width: 70%;
             height: 4em;
             border: none;
             border-radius: 20px;
         }
         button {
             @extend %button;
-            margin: 4em 0 1em 0;
+            margin: 3em 0 1em 0;
         }
     }
 
     .works {
         @extend %box-spacing;
+
         &__container {
             text-align: center;
             .works__title {
                 font-size: $H2-size;
-                margin-bottom: 1em;
+                margin-bottom: 1em  ;
             }
             .works__details {
-                font-size: $p-size;
-                color: $Items-gray;
+                @extend %paragraph;
             }
         }
+
+        .code {
+            text-align: center;
+            margin: 2em 0 3em;
+            &__title {
+                font-size: $H4-size;
+                color: $Text-light-gray;
+                margin-bottom: 1em;
+            }
+            &__details {
+                font-size: $p-size;
+                color: $code-color;
+            }
+        }
+
         button {
             @extend %button;
         }
     }
 
     .whatIs {
+
         @extend %box-spacing;
+        color: white;
+
+        &__title {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            &--item {
+                font-size: $H2-size;
+                border-bottom: 5px solid $Global-purple;
+                margin: 0.2em;
+            }
+        }
+
+        &__container {
+            text-align: center;
+            margin: 2em 0 1em 0;
+            &--details {
+                @extend %paragraph;
+                margin-bottom: 1em;
+            }
+            &--code {
+                font-size: $p-size;
+                color: $code-color;
+            }
+        }
     }
 }
 

@@ -3,7 +3,8 @@
  \---------------------------------*/
 
  %button {
-    padding: 1em 3em;
+     font-size: $butt-size;
+    padding: 1.2em 4em;
     background-color: $Global-purple;
     color: $Items-gray;
     border: none;
@@ -13,6 +14,13 @@
  %title-concepts {
 
  }
+
+%paragraph {
+    font-size: $p-size;
+    color: $Items-gray;
+    line-height: 3rem;
+    text-align: left;
+}
 
 %logo {
     width: 150px;

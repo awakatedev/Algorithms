@@ -1,13 +1,21 @@
 header {
-    display: flex;
+    width: 100vw;
     height: 80px;
-    padding: 0 2em;
-    justify-content: space-between;
-    align-items: center;
     background-color: $Background-dark-base;
+    position: fixed;
+
+    .header__container {
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
     .logo {
         @extend %logo;
+        padding: 0 1em;
     }
 
     .nav__container {
@@ -15,7 +23,6 @@ header {
     }
 
     .mobile-menu {
-        padding: 0 2em;
         .lbl-menu .spn1, .spn2, .spn3{
             position: relative;
             background: $Items-gray;
@@ -53,22 +60,19 @@ header {
             & ~ .nav__container {
                 display: block;
                 position: absolute;
-                padding: 5em 2em;
                 top: 0;
-                bottom: 50%;
                 left: 0;
                 right: 0;
                 text-align: center;
                 background-color: $Background-light-base;
-                border-radius: 0 0 45% 45%;
-                z-index: 2;
+                border-radius: 0 0 35% 35%;
                 .menu {
                     .menu__container{
                         list-style:none;
                         width: 80%;
-                        margin: 8em auto;
+                        margin: 6em auto 4em;
                     &__item {
-                        padding: 5em 1em;
+                        padding: 1em 0;
                         background: $Items-gray;
                         border: none;
                         &:first-child {
@@ -80,7 +84,7 @@ header {
                         a {
                             text-decoration: none;
                             color: $Title-dark-gray;
-                            font-size: $butt-size;
+                            font-size: $p-size;
                             font-weight: $p-W;
                         }
                     }
@@ -91,16 +95,17 @@ header {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    margin-bottom: 5em;
                     z-index: 3;
                     .checkbox__btn-swtich {
                         display: inline-block;
                         background-color: $Items-gray;
                         padding: 5px;
                         border-radius: 50px;
-                        width: 100px;
-                        height: 50px;
+                        width: 60px;
+                        height: 30px;
                         label > div {
-                            background-color: $Swtich-btn;
+                            background-color: $Background-light-base;
                             width: 50%;
                             height: 100%;
                             border-radius: 50%;
@@ -108,29 +113,29 @@ header {
                         }
                     }
                     .checkbox__switch{
-                        font-size: $butt-size;
+                        font-size: $H3-size;
                         font-weight: $Title-W;
-                        margin-right: 40px;
+                        margin-right: 30px;
                     }
                     .checkbox__input {
                         display: none;
                         &:checked {
                             & ~ label > div {
-                                background-color: $Background-light-base;
-                                transform: translate(50px);
+                                background-color: $Swtich-btn;
+                                transform: translate(30px);
                             }
                         }
                     }
                 }
-            }
-            & ~ .black-background {
-                position: absolute;
-                bottom: 0;
-                top: 25%;
-                left: 0;
-                right: 0;
-                background-color: $Title-dark-gray;
-                z-index: 1;
+                .black-background {
+                    position: absolute;
+                    bottom: -200%;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: $Title-dark-gray;
+                    z-index: -1;
+                }
             }
         }
     }
