@@ -4,40 +4,47 @@
 
 //COLOURS
 //Global COLOURS
-$Global-purple: #540298;
-$Title-dark-gray: #0E0E0E;
-$Items-gray: #D1D1D1;
+$Global-purple: #540298;//colour for the buttons
+$Items-gray: #FFFFFF;//Coulour for te buttons text
+$Btn-background: linear-gradient(90deg, #9745BE 0%, #6F06C6 100%);
+$Swtich-btn: #080326;
+$code-color: #FF7C03;
 
 //light theme COLOURS
-$Text-light-gray: #525252;
+$Title-light-darkGray: #0E0E0E;//colour for titles in light mode
+$Text-light-gray: #525252;//Colour for the info in light mode
 $Background-light-base: #E5E5E5;
-$Background-light-footer: #C4C4C4;
+$Background-light-darkerBase: #C4C4C4;
 $Background-light-console: #1C1C1C;
 
 //dark theme COLOURS
-$Text-dark-gray: #CFCFCF;
+$Text-dark-gray: #C4C4C4;//Colour for the info in dark mode
 $Background-dark-base: #070617;
-$Background-light-footer: #01000E;
-$Background-light-console: #1C1A25;
+$Background-dark-darkerBase: #01000E;
+$Background-dark-console: #040212;
+
 
 //FONTS
 $Base-font: 'Lato', sans-serif;
 
 //FONT size
 //Titles
-$H1-size: 4.5rem;
-$H2-size: 4rem;
-$H3-size: 3.6rem;
+$H1-size: 4rem;
+$H2-size: 3rem;
+$H3-size: 2.6rem;
+$H4-size: 2.4rem;
 //Text
-$p-size: 3rem;
+$p-size: 2rem;
 //Buttons
-$butt-size: 3.5rem;
+$butt-size: 1.8rem;
+$i-size: 1.5rem;
 
 //FONT weight
 $Title-W: 900;
-$p-W: 400;
-$butt-W: 300;
+$p-W: 700;
+$butt-W: 400;
 
 //Line height
 $Title-H: 4rem;
-$p-H: 3rem;
+$p-H: 4rem;
+$i-H: 1.5rem;

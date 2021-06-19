@@ -1,6 +1,58 @@
 /*----------------------------------\
           DARK THEME
  \---------------------------------*/
- body.dark{
-   
- }
+ //Mobile
+ body.dark {
+   h1,h2,h3{
+     color: $Items-gray;
+   }
+  header{
+    background-color: $Background-dark-darkerBase;
+     .mobile-menu {
+        .lbl-menu .spn1, .spn2, .spn3{
+
+            background: $Items-gray;
+
+        }
+      }
+  }
+
+  .hero{
+    background-color: $Background-dark-darkerBase;
+    ul,li{
+      color: $Items-gray;
+    }
+  }
+
+  main{
+    background-color: $Background-dark-base;
+    .works{
+      background-color: $Background-dark-base;
+      .works__details{
+        @include paragraph($Text-dark-gray);
+      }
+      .code{
+        &__details{
+          background-color: $Background-dark-console;
+        }
+      }
+    }
+    .whatIs{
+     background-color: $Background-dark-base;
+     &__container{
+     &--details{
+       @include paragraph($Text-dark-gray);
+     }
+   }
+     .activeTitle{
+              h2{
+                color: $Items-gray;
+              }
+            }
+    }
+  }
+
+  footer{
+    background-color: $Background-dark-darkerBase;
+  }
+}

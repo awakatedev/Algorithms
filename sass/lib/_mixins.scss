@@ -1,0 +1,28 @@
+/*----------------------------------\
+          @MIXINS
+ \---------------------------------*/
+
+@mixin respond-to($width){
+  @media only screen and (min-width:$width){
+    @content; }
+}
+
+@mixin box-spacing($widthContainer: 85%){
+    width: $widthContainer;
+    margin: 0 auto;
+    padding: 10em 0;
+    border: none;
+  //  margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+@mixin paragraph ($datacClour: $Text-light-gray){
+    font-size: $p-size;
+    font-weight: $p-W;
+    line-height: $p-H;
+    color: $datacClour;
+    line-height: 3rem;
+    text-align: left;
+}
