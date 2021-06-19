@@ -11,38 +11,24 @@
           %PLACE HOLERS
  \---------------------------------*/
 .main .works button, .main .hero button {
-  font-size: 1.8rem;
-  padding: 1.2em 4em;
-  background-color: #540298;
-  color: #D1D1D1;
+  font-size: 2rem;
+  font-weight: 400;
+  padding: 1em 3em;
+  background-color: #8745BE;
+  background-image: linear-gradient(90deg, #9745BE 0%, #6F06C6 100%);
+  color: #FFFFFF;
   border: none;
-  border-radius: 10px;
-}
-
-footer .team .member__data--details, .main .whatIs__container--details, .main .works__container .works__details {
-  font-size: 2.2rem;
-  color: #D1D1D1;
-  line-height: 3rem;
-  text-align: left;
+  border-radius: 20px;
 }
 
 footer .logo, header .logo {
   width: 150px;
 }
 
-footer .team, .main .whatIs, .main .works, .main .hero {
-  width: 90%;
-  padding-top: 8em;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 header {
   width: 100vw;
   height: 80px;
-  background-color: #070617;
+  background-color: #C4C4C4;
   position: fixed;
 }
 header .header__container {
@@ -61,7 +47,7 @@ header .nav__container {
 }
 header .mobile-menu .lbl-menu .spn1, header .mobile-menu .spn2, header .mobile-menu .spn3 {
   position: relative;
-  background: #D1D1D1;
+  background: #0E0E0E;
   width: 30px;
   height: 3px;
   border-radius: 5px;
@@ -106,7 +92,7 @@ header .menu-check:checked ~ .nav__container .menu .menu__container {
 }
 header .menu-check:checked ~ .nav__container .menu .menu__container__item {
   padding: 1em 0;
-  background: #D1D1D1;
+  background: #FFFFFF;
   border: none;
 }
 header .menu-check:checked ~ .nav__container .menu .menu__container__item:first-child {
@@ -118,8 +104,8 @@ header .menu-check:checked ~ .nav__container .menu .menu__container__item:last-c
 header .menu-check:checked ~ .nav__container .menu .menu__container__item a {
   text-decoration: none;
   color: #0E0E0E;
-  font-size: 2.2rem;
-  font-weight: 400;
+  font-size: 2rem;
+  font-weight: 700;
 }
 header .menu-check:checked ~ .nav__container .checkbox {
   display: flex;
@@ -129,29 +115,34 @@ header .menu-check:checked ~ .nav__container .checkbox {
   z-index: 3;
 }
 header .menu-check:checked ~ .nav__container .checkbox .checkbox__btn-swtich {
+  position: relative;
   display: inline-block;
-  background-color: #D1D1D1;
+  background-color: #FFFFFF;
   padding: 5px;
   border-radius: 50px;
   width: 60px;
   height: 30px;
 }
-header .menu-check:checked ~ .nav__container .checkbox .checkbox__btn-swtich label > div {
+header .menu-check:checked ~ .nav__container .checkbox .checkbox__btn-swtich label:after {
+  content: "";
+  position: absolute;
   background-color: #E5E5E5;
-  width: 50%;
-  height: 100%;
-  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  left: 5px;
+  top: 5;
   transition: all 700ms ease;
 }
 header .menu-check:checked ~ .nav__container .checkbox .checkbox__switch {
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   font-weight: 900;
   margin-right: 30px;
 }
 header .menu-check:checked ~ .nav__container .checkbox .checkbox__input {
   display: none;
 }
-header .menu-check:checked ~ .nav__container .checkbox .checkbox__input:checked ~ label > div {
+header .menu-check:checked ~ .nav__container .checkbox .checkbox__input:checked ~ label:after {
   background-color: #080326;
   transform: translate(30px);
 }
@@ -168,78 +159,162 @@ header .menu-check:checked ~ .nav__container .black-background {
 .main {
   width: 100vw;
   margin: auto;
-  background-color: #070617;
+  background-color: #E5E5E5;
+}
+.main .hero {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25%;
+  height: 100vh;
+  background-color: #C4C4C4;
 }
 .main .hero__title {
-  font-size: 4.5rem;
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 4rem;
   text-align: center;
-  margin: 0.5em 0 0.5em 0;
+  margin: 0.5em 5%;
 }
 .main .hero .search {
-  padding: 0 1em;
+  padding-left: 1.5em;
+  font-size: 2rem;
   margin: 1em 0;
-  width: 70%;
-  height: 4em;
+  width: 65%;
+  max-width: 520px;
+  height: 2.5em;
   border: none;
-  border-radius: 20px;
+  outline: none;
+  border-radius: 100px;
+}
+.main .hero ul, .main .hero li {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  margin-bottom: 5px;
 }
 .main .hero button {
-  margin: 3em 0 1em 0;
+  margin: 1em 0 1em 0;
+}
+.main .dataContainer {
+  width: 100%;
+}
+.main .works {
+  width: 85%;
+  margin: 0 auto;
+  padding: 10em 0;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #E5E5E5;
 }
 .main .works__container {
   text-align: center;
 }
 .main .works__container .works__title {
-  font-size: 4rem;
+  font-size: 3rem;
   margin-bottom: 1em;
+}
+.main .works__container .works__details {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 4rem;
+  color: #525252;
+  line-height: 3rem;
+  text-align: left;
 }
 .main .works .code {
   text-align: center;
-  margin: 2em 0 3em;
+  margin: 3em auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .main .works .code__title {
-  font-size: 2.3rem;
+  font-size: 2.4rem;
   color: #525252;
   margin-bottom: 1em;
+  text-align: left;
 }
 .main .works .code__details {
-  font-size: 2.2rem;
+  width: 80%;
+  max-width: 580px;
+  height: 150px;
+  font-size: 2rem;
   color: #FF7C03;
+  background-color: #1C1C1C;
+  padding: 30px;
+  border-radius: 15px;
 }
 .main .whatIs {
-  color: white;
+  width: 85%;
+  margin: 0 auto;
+  padding: 10em 0;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #E5E5E5;
 }
 .main .whatIs__title {
+  width: 90%;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 5em;
 }
 .main .whatIs__title--item {
-  font-size: 4rem;
-  border-bottom: 5px solid #540298;
-  margin: 0.2em;
+  height: 80px;
+  width: 45%;
+  padding: 10px 0 20px 5px;
+  border-bottom: 8px solid #A5A5A5;
+}
+.main .whatIs__title--item h2 {
+  font-size: 3rem;
+  color: #A5A5A5;
 }
 .main .whatIs__container {
   text-align: center;
   margin: 2em 0 1em 0;
 }
 .main .whatIs__container--details {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 4rem;
+  color: #525252;
+  line-height: 3rem;
+  text-align: left;
   margin-bottom: 1em;
 }
 .main .whatIs__container--code {
-  font-size: 2.2rem;
+  font-size: 2rem;
   color: #FF7C03;
+}
+.main .whatIs .activeTitle {
+  border-bottom: 8px solid #540298;
+}
+.main .whatIs .activeTitle h2 {
+  color: #0E0E0E;
 }
 
 footer {
   width: 100vw;
   margin: auto;
-  background-color: #070617;
+  background-color: #C4C4C4;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 footer .team {
+  width: 85%;
+  margin: 0 auto;
+  padding: 10em 0;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 2em 0 2em 0;
 }
 footer .team .member {
@@ -254,15 +329,74 @@ footer .team .member__img {
   margin-right: 30px;
 }
 footer .team .member__data--title {
-  font-size: 2.5rem;
+  font-size: 2.6rem;
 }
 footer .team .member__data--details {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 4rem;
+  color: #525252;
+  line-height: 3rem;
+  text-align: left;
   margin: 0.3em 0 0.3em 0;
 }
 footer .team .member__data .socialMedia .fab {
   color: white;
-  font-size: 2.3rem;
+  font-size: 2.4rem;
   margin-right: 20px;
+}
+
+/*----------------------------------\
+          DARK THEME
+ \---------------------------------*/
+body.dark h1, body.dark h2, body.dark h3 {
+  color: #FFFFFF;
+}
+body.dark header {
+  background-color: #01000E;
+}
+body.dark header .mobile-menu .lbl-menu .spn1, body.dark header .mobile-menu .spn2, body.dark header .mobile-menu .spn3 {
+  background: #FFFFFF;
+}
+body.dark .hero {
+  background-color: #01000E;
+}
+body.dark .hero ul, body.dark .hero li {
+  color: #FFFFFF;
+}
+body.dark main {
+  background-color: #070617;
+}
+body.dark main .works {
+  background-color: #070617;
+}
+body.dark main .works .works__details {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 4rem;
+  color: #C4C4C4;
+  line-height: 3rem;
+  text-align: left;
+}
+body.dark main .works .code__details {
+  background-color: #040212;
+}
+body.dark main .whatIs {
+  background-color: #070617;
+}
+body.dark main .whatIs__container--details {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 4rem;
+  color: #C4C4C4;
+  line-height: 3rem;
+  text-align: left;
+}
+body.dark main .whatIs .activeTitle h2 {
+  color: #FFFFFF;
+}
+body.dark footer {
+  background-color: #01000E;
 }
 
 /*---------------------------\
@@ -281,7 +415,7 @@ html {
 h1,
 h2,
 h3 {
-  color: #525252;
+  color: #0E0E0E;
 }
 
 /*# sourceMappingURL=main.css.map */

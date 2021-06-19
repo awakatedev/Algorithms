@@ -1,7 +1,8 @@
+
 header {
     width: 100vw;
     height: 80px;
-    background-color: $Background-dark-base;
+    background-color: $Background-light-darkerBase;
     position: fixed;
 
     .header__container {
@@ -25,7 +26,7 @@ header {
     .mobile-menu {
         .lbl-menu .spn1, .spn2, .spn3{
             position: relative;
-            background: $Items-gray;
+            background: $Title-light-darkGray;
             width: 30px;
             height: 3px;
             border-radius: 5px;
@@ -83,7 +84,7 @@ header {
                         }
                         a {
                             text-decoration: none;
-                            color: $Title-dark-gray;
+                            color: $Title-light-darkGray;
                             font-size: $p-size;
                             font-weight: $p-W;
                         }
@@ -98,17 +99,22 @@ header {
                     margin-bottom: 5em;
                     z-index: 3;
                     .checkbox__btn-swtich {
+                      position: relative;
                         display: inline-block;
                         background-color: $Items-gray;
                         padding: 5px;
                         border-radius: 50px;
                         width: 60px;
                         height: 30px;
-                        label > div {
+                        label:after {
+                            content: "";
+                            position: absolute;
                             background-color: $Background-light-base;
-                            width: 50%;
-                            height: 100%;
-                            border-radius: 50%;
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 100%;
+                            left: 5px;
+                            top: 5;
                             transition: all 700ms ease;
                         }
                     }
@@ -120,7 +126,7 @@ header {
                     .checkbox__input {
                         display: none;
                         &:checked {
-                            & ~ label > div {
+                            & ~ label:after{
                                 background-color: $Swtich-btn;
                                 transform: translate(30px);
                             }
@@ -133,7 +139,7 @@ header {
                     top: 0;
                     left: 0;
                     right: 0;
-                    background-color: $Title-dark-gray;
+                    background-color: $Title-light-darkGray;
                     z-index: -1;
                 }
             }

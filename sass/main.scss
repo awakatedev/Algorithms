@@ -9,7 +9,7 @@
 @import "./main-modules/header";
 @import "./main-modules/main";
 @import "./main-modules/footer";
-
+@import "./dark";
 /*---------------------------\
          MAIN
 \---------------------------*/
@@ -26,6 +26,5 @@ html{
 h1,
 h2,
 h3{
-  color: $Text-light-gray;
+  color: $Title-light-darkGray;
 }
-

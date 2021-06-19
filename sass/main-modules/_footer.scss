@@ -1,7 +1,7 @@
 footer {
     width: 100vw;
     margin: auto;
-    background-color: $Background-dark-base;
+    background-color: $Background-light-darkerBase;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,7 +10,7 @@ footer {
 
     }
     .team {
-        @extend %box-spacing;
+        @include box-spacing();
         padding: 2em 0 2em 0;
         .member {
             margin: 1em 0 3em 0;
@@ -27,7 +27,7 @@ footer {
                     font-size: $H3-size;
                 }
                 &--details {
-                    @extend %paragraph;
+                    @include paragraph();
                     margin: 0.3em 0 0.3em 0;
                 }
                 .socialMedia{
