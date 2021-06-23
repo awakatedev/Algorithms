@@ -8,13 +8,22 @@
    }
   header{
     background-color: $Background-dark-darkerBase;
-     .mobile-menu {
-        .lbl-menu .spn1, .spn2, .spn3{
 
-            background: $Items-gray;
+    //       menu__container
+    //       {
+    //         &__item
+    //         {
+    //           a:hover { color: $Items-gray; }
+    //         }
+    //       }
 
-        }
+    .mobile-menu {
+      .lbl-menu .spn1, .spn2, .spn3{
+
+          background: $Items-gray;
+
       }
+    }
   }
 
   .hero{
