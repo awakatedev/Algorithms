@@ -17,60 +17,6 @@ body {
   overflow-x: hidden;
 }
 @media only screen and (min-width: 900px) {
-  body {
-    /*----------------------------------\
-              DARK THEME
-     \---------------------------------*/
-  }
-  body body.dark h1, body body.dark h2, body body.dark h3 {
-    color: #FFFFFF;
-  }
-  body body.dark header {
-    background-color: #01000E;
-  }
-  body body.dark header .mobile-menu .lbl-menu .spn1, body body.dark header .mobile-menu .spn2, body body.dark header .mobile-menu .spn3 {
-    background: #FFFFFF;
-  }
-  body body.dark .hero {
-    background-color: #01000E;
-  }
-  body body.dark .hero ul, body body.dark .hero li {
-    color: #FFFFFF;
-  }
-  body body.dark main {
-    background-color: #070617;
-  }
-  body body.dark main .works {
-    background-color: #070617;
-  }
-  body body.dark main .works .works__details {
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 4rem;
-    color: #C4C4C4;
-    line-height: 3rem;
-    text-align: left;
-  }
-  body body.dark main .works .code__details {
-    background-color: #040212;
-  }
-  body body.dark main .whatIs {
-    background-color: #070617;
-  }
-  body body.dark main .whatIs__container--details {
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 4rem;
-    color: #C4C4C4;
-    line-height: 3rem;
-    text-align: left;
-  }
-  body body.dark main .whatIs .activeTitle h2 {
-    color: #FFFFFF;
-  }
-  body body.dark footer {
-    background-color: #01000E;
-  }
   body .header {
     width: 100vw;
     height: 70px;
@@ -160,6 +106,29 @@ body {
     content: "";
     transform: translateX(15px);
     -webkit-transform: translateX(15px);
+  }
+  body .main .hero {
+    height: 80vh;
+    padding-top: 5%;
+  }
+  body .main .hero__params {
+    padding: 2.5rem 0;
+  }
+  body .main .hero__params br {
+    display: none;
+  }
+  body .main .works {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4rem 2rem;
+  }
+  body .footer .team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 1rem 2.5rem;
+  }
+  body .footer .team .member {
+    justify-self: center;
   }
 }
 

@@ -18,7 +18,6 @@ body{
 \--------------------------*/
     overflow-x: hidden;
     @include respond-to(900px) {
-        // @import "./_dark";
         // HEADER
         .header 
         {
@@ -28,8 +27,7 @@ body{
             z-index: 4;
             display: flex;
             justify-content: space-between;
-        
-            
+          
             &__container
             {
                 width: 100%;
@@ -142,10 +140,50 @@ body{
                     }
                 }
             }      
-        }  
+        }
+        
+        // MAIN
+        .main 
+        {
+            .hero
+            {
+                height: 80vh;
+                padding-top: 5%;
+
+                &__params
+                {
+                    padding: 2.5rem 0;
+
+                    br { display: none }
+                }
+            }
+            .works
+            {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 4rem 2rem;
+            }
+        }
+
+        // FOOTER
+        .footer
+        {
+            .team
+            {
+                display: grid;
+                grid-template-columns: repeat( auto-fit, minmax(400px, 1fr) );
+                grid-gap: 1rem 2.5rem;
+
+                .member
+                {
+                    justify-self: center;
+                }
+            }
+        }
     }
 }
 
+// DARK MODE ITEM:HOVER
 body.dark
 {
     .header
@@ -154,7 +192,7 @@ body.dark
         {
             &__item
             {
-                a:hover { color: $Items-gray; }
+                a:hover { color: $Items-gray }
             }
         }
     }
