@@ -12,18 +12,23 @@
  \---------------------------------*/
 body {
   /*--------------------------\
-             Global
-  \--------------------------*/
+           Global
+\--------------------------*/
   overflow-x: hidden;
 }
+
 @media only screen and (min-width: 900px) {
   body .header {
     width: 100vw;
     height: 70px;
     position: relative;
     z-index: 4;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   body .header__container {
     width: 100%;
@@ -33,15 +38,25 @@ body {
     display: none;
   }
   body .header__container .nav__container {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    -ms-grid-columns: 4fr 1fr;
+        grid-template-columns: 4fr 1fr;
     width: 100%;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   body .header__container .nav__container .menu__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     list-style: none;
   }
   body .header__container .nav__container .menu__container__item {
@@ -60,7 +75,8 @@ body {
     cursor: pointer;
   }
   body .header__container .nav__container .checkbox {
-    justify-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
   body .header__container .nav__container .checkbox__switch {
     display: none;
@@ -86,6 +102,7 @@ body {
     bottom: 0;
     border-radius: 50px;
     background-color: #FFFFFF;
+    -webkit-transition: 0.3s;
     transition: 0.3s;
   }
   body .header__container .nav__container .checkbox__btn-switch label:hover {
@@ -100,12 +117,19 @@ body {
     bottom: 4px;
     border-radius: 50%;
     background-color: #080326;
+    -webkit-transition: 0.3s;
     transition: 0.3s;
   }
   body .header__container .nav__container .checkbox__btn-switch input:checked + label:before {
     content: "";
     transform: translateX(15px);
     -webkit-transform: translateX(15px);
+  }
+  body .main .svg__hero {
+    display: block;
+  }
+  body .main .svg__hero--mobile {
+    display: none;
   }
   body .main .hero {
     height: 80vh;
@@ -118,22 +142,26 @@ body {
     display: none;
   }
   body .main .works {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     grid-gap: 4rem 2rem;
   }
   body .footer .team {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-gap: 1rem 2.5rem;
   }
   body .footer .team .member {
-    justify-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
 }
 
 body.dark .header .menu__container__item a:hover {
   color: #FFFFFF;
 }
-
 /*# sourceMappingURL=desktop.css.map */

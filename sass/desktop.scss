@@ -6,195 +6,176 @@
 @import "./lib/variables";
 @import "./lib/mixins";
 @import "./lib/place-holders";
-body{
+body {
+  //desktop-modules
+  // @import "./desktop-modules/header";
+  // @import "./desktop-modules/footer";
+  //Layout
 
-//desktop-modules
-// @import "./desktop-modules/header";
-// @import "./desktop-modules/footer";
-//Layout
-
-/*--------------------------\
+  /*--------------------------\
            Global
 \--------------------------*/
-    overflow-x: hidden;
-    @include respond-to(900px) {
-        // HEADER
-        .header 
-        {
-            width: 100vw;
-            height: 70px;
-            position: relative;
-            z-index: 4;
-            display: flex;
-            justify-content: space-between;
-          
-            &__container
-            {
-                width: 100%;
-                padding: 0 120px 0 120px;
+  overflow-x: hidden;
+  @include respond-to(900px) {
+    // HEADER
+    .header {
+      width: 100vw;
+      height: 70px;
+      position: relative;
+      z-index: 4;
+      display: flex;
+      justify-content: space-between;
 
-                .mobile-menu
-                {
-                    display: none;
-                }
-                .nav__container
-                {
-                    display: grid;
-                    grid-template-columns: 4fr 1fr;
-                    width: 100%;
-                    align-items: center;
+      &__container {
+        width: 100%;
+        padding: 0 120px 0 120px;
 
-                    .menu 
-                    {
-                        &__container 
-                        {
-                            display: flex;
-                            justify-content: space-evenly;
-                            align-items: center;
-                            list-style: none;
-
-                            &__item
-                            {
-                                margin-right: 25px;
-                            }
-                            a 
-                            {
-                                text-decoration: none;
-                                color: $Text-light-gray;
-                                font-size: $p-size;
-                                font-weight: $i-size;
-                                &:hover
-                                {
-                                    color: $Title-light-darkGray;
-                                    border-bottom: 3px solid $Global-purple;
-                                    padding-bottom: 24px;
-                                    cursor: pointer;
-                                }
-                            }
-                        }
-                    }
-                    .checkbox
-                    {
-                        justify-self: center;
-                        &__switch
-                        {
-                            display: none;
-                        }
-                        &__btn-switch
-                        {
-                            position: relative;
-                            display: inline-block;
-                            width: 40px;
-                            height: 25px;
-                            margin: 0 2rem;
-
-                            input
-                            {
-                                opacity: 0;
-                                width: 0;
-                                height: 0;
-                            }
-
-                            label
-                            {
-                                position: absolute;
-                                cursor: pointer;
-                                top: 0;
-                                left: 0;
-                                right: 0;
-                                bottom: 0;
-                                border-radius: 50px;
-                                // background: linear-gradient(
-                                //     to right,
-                                //     var(--linear_gradient_1),
-                                //     var(--linear_gradient_2)
-                                // );
-                                background-color: $Items-gray;
-                                transition: 0.3s;
-
-                                &:hover
-                                {
-                                    opacity: 0.8; 
-                                }
-
-                                &::before
-                                {
-                                    content: "";
-                                    position: absolute;
-                                    height: 18px;
-                                    width: 18px;
-                                    left: 4px;
-                                    bottom: 4px;
-                                    border-radius: 50%;
-                                    background-color: $Swtich-btn;
-                                    transition: 0.3s;
-                                }
-                            }
-
-                           input:checked + label:before {
-                                content: "";
-                                transform: translateX(15px);
-                                -webkit-transform: translateX(15px);
-                            }
-                        }
-                    }
-                }
-            }      
+        .mobile-menu {
+          display: none;
         }
-        
-        // MAIN
-        .main 
-        {
-            .hero
-            {
-                height: 80vh;
-                padding-top: 5%;
+        .nav__container {
+          display: grid;
+          grid-template-columns: 4fr 1fr;
+          width: 100%;
+          align-items: center;
 
-                &__params
-                {
-                    padding: 2.5rem 0;
+          .menu {
+            &__container {
+              display: flex;
+              justify-content: space-evenly;
+              align-items: center;
+              list-style: none;
 
-                    br { display: none }
+              &__item {
+                margin-right: 25px;
+              }
+              a {
+                text-decoration: none;
+                color: $Text-light-gray;
+                font-size: $p-size;
+                font-weight: $i-size;
+                &:hover {
+                  color: $Title-light-darkGray;
+                  border-bottom: 3px solid $Global-purple;
+                  padding-bottom: 24px;
+                  cursor: pointer;
                 }
+              }
             }
-            .works
-            {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-gap: 4rem 2rem;
+          }
+          .checkbox {
+            justify-self: center;
+            &__switch {
+              display: none;
             }
-        }
+            &__btn-switch {
+              position: relative;
+              display: inline-block;
+              width: 40px;
+              height: 25px;
+              margin: 0 2rem;
 
-        // FOOTER
-        .footer
-        {
-            .team
-            {
-                display: grid;
-                grid-template-columns: repeat( auto-fit, minmax(400px, 1fr) );
-                grid-gap: 1rem 2.5rem;
+              input {
+                opacity: 0;
+                width: 0;
+                height: 0;
+              }
 
-                .member
-                {
-                    justify-self: center;
+              label {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border-radius: 50px;
+                // background: linear-gradient(
+                //     to right,
+                //     var(--linear_gradient_1),
+                //     var(--linear_gradient_2)
+                // );
+                background-color: $Items-gray;
+                transition: 0.3s;
+
+                &:hover {
+                  opacity: 0.8;
                 }
+
+                &::before {
+                  content: "";
+                  position: absolute;
+                  height: 18px;
+                  width: 18px;
+                  left: 4px;
+                  bottom: 4px;
+                  border-radius: 50%;
+                  background-color: $Swtich-btn;
+                  transition: 0.3s;
+                }
+              }
+
+              input:checked + label:before {
+                content: "";
+                transform: translateX(15px);
+                -webkit-transform: translateX(15px);
+              }
             }
+          }
         }
+      }
     }
+
+    // MAIN
+    .main {
+      .svg__hero {
+        display: block;
+        &--mobile {
+          display: none;
+        }
+      }
+      .hero {
+        height: 80vh;
+        padding-top: 5%;
+
+        &__params {
+          padding: 2.5rem 0;
+
+          br {
+            display: none;
+          }
+        }
+      }
+      .works {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 4rem 2rem;
+      }
+    }
+
+    // FOOTER
+    .footer {
+      .team {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-gap: 1rem 2.5rem;
+
+        .member {
+          justify-self: center;
+        }
+      }
+    }
+  }
 }
 
 // DARK MODE ITEM:HOVER
-body.dark
-{
-    .header
-    {
-        .menu__container
-        {
-            &__item
-            {
-                a:hover { color: $Items-gray }
-            }
+body.dark {
+  .header {
+    .menu__container {
+      &__item {
+        a:hover {
+          color: $Items-gray;
         }
+      }
     }
+  }
 }
-    

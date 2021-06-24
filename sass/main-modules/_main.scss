@@ -1,142 +1,150 @@
 .main {
+  width: 100vw;
+  margin: auto;
+  background-color: $Background-light-base;
+  .svg__hero {
+    display: none;
+    position: absolute;
+    top: -15%;
+    z-index: 0;
     width: 100vw;
-    margin: auto;
-   background-color: $Background-light-base;
-
-    .hero {
-      width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 25%;
-        height: 100vh;
-        background-color: $Background-light-darkerBase;
-        &__title {
-            font-size: $H1-size;
-            font-weight: $Title-W;
-            line-height: $Title-H;
-            text-align: center;
-            margin: 0.5em  5%;
-        }
-        .search {
-            padding-left: 1.5em;
-            font-size: $p-size;
-            margin: 1em 0;
-            width: 65%;
-            max-width: 520px;
-            height: 2.5em;
-            border: none;
-            outline: none;
-            border-radius: 100px;
-        }
-        ul,li{
-          font-size: $i-size;
-          font-weight: $butt-W;
-          line-height: $i-H;
-          margin-bottom: 5px;
-        }
-        button {
-            @extend %button;
-            margin: 1em 0 1em 0;
-        }
-
-
-
-    }
-.dataContainer{
-  width: 100%;
-}
-    .works {
-        @include box-spacing();
-        background-color: $Background-light-base;
-        &__container {
-            text-align: center;
-            .works__title {
-                font-size: $H2-size;
-                margin-bottom: 1em  ;
-            }
-            .works__details {
-                  @include paragraph();
-            }
-        }
-
-        .code {
-            text-align: center;
-            margin: 3em auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            &__title {
-                font-size: $H4-size;
-                color: $Text-light-gray;
-                margin-bottom: 1em;
-                text-align: left;
-            }
-            &__details {
-              width: 80%;
-              max-width: 580px;
-              height: 150px;
-                font-size: $p-size;
-                color: $code-color;
-                background-color: $Background-light-console;
-                padding: 30px;
-                border-radius: 15px;
-
-            }
-
-        }
-
-
-        button {
-            @extend %button;
-
+    &--mobile {
+      top: calc(50% - 140vw);
+      display: block;
+      position: absolute;
+      width: 200vw;
+      left: calc(50% - 100vw);
     }
   }
 
-    .whatIs {
-
-          @include box-spacing();
-        background-color: $Background-light-base;
-
-        &__title {
-           width: 90%;
-            display: flex;
-            justify-content: space-around;
-           align-items: center;
-           margin-bottom: 5em;
-            &--item {
-              height: 80px;
-              width: 45%;
-              padding: 10px 0 20px 5px;
-              border-bottom: 8px solid #A5A5A5;
-
-                h2{
-                  font-size: $H2-size;
-                  color: #A5A5A5;
-                }
-            }
-        }
-
-        &__container {
-            text-align: center;
-            margin: 2em 0 1em 0;
-
-            &--details {
-                  @include paragraph();
-                margin-bottom: 1em;
-            }
-
-            &--code {
-                font-size: $p-size;
-                color: $code-color;
-            }
-
-        }
-        .activeTitle{
-              border-bottom: 8px solid $Global-purple;
-              h2{
-                color: $Title-light-darkGray;
-              }
-            }
+  .hero {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 25%;
+    height: 100vh;
+    // background-color: $Background-light-darkerBase;
+    &__title {
+      font-size: $H1-size;
+      font-weight: $Title-W;
+      line-height: $Title-H;
+      text-align: center;
+      margin: 0.5em 5%;
     }
+    .search {
+      padding-left: 1.5em;
+      font-size: $p-size;
+      margin: 1em 0;
+      width: 65%;
+      max-width: 520px;
+      height: 2.5em;
+      border: none;
+      outline: none;
+      border-radius: 100px;
+    }
+    ul,
+    li {
+      font-size: $i-size;
+      font-weight: $butt-W;
+      line-height: $i-H;
+      margin-bottom: 5px;
+    }
+    button {
+      @extend %button;
+      margin: 1em 0 1em 0;
+    }
+  }
+  .dataContainer {
+    width: 100%;
+  }
+  .works {
+    @include box-spacing();
+    background-color: $Background-light-base;
+    &__container {
+      text-align: center;
+      .works__title {
+        font-size: $H2-size;
+        margin-bottom: 1em;
+      }
+      .works__details {
+        @include paragraph();
+      }
+    }
+
+    .code {
+      text-align: center;
+      margin: 3em auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &__title {
+        font-size: $H4-size;
+        color: $Text-light-gray;
+        margin-bottom: 1em;
+        text-align: left;
+      }
+      &__details {
+        width: 80%;
+        max-width: 580px;
+        height: 150px;
+        font-size: $p-size;
+        color: $code-color;
+        background-color: $Background-light-console;
+        padding: 30px;
+        border-radius: 15px;
+      }
+    }
+
+    button {
+      @extend %button;
+    }
+  }
+
+  .whatIs {
+    @include box-spacing();
+    background-color: $Background-light-base;
+
+    &__title {
+      width: 90%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: 5em;
+      &--item {
+        height: 80px;
+        width: 45%;
+        padding: 10px 0 20px 5px;
+        border-bottom: 8px solid #a5a5a5;
+
+        h2 {
+          font-size: $H2-size;
+          color: #a5a5a5;
+        }
+      }
+    }
+
+    &__container {
+      text-align: center;
+      margin: 2em 0 1em 0;
+
+      &--details {
+        @include paragraph();
+        margin-bottom: 1em;
+      }
+
+      &--code {
+        font-size: $p-size;
+        color: $code-color;
+      }
+    }
+    .activeTitle {
+      border-bottom: 8px solid $Global-purple;
+      h2 {
+        color: $Title-light-darkGray;
+      }
+    }
+  }
 }

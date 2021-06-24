@@ -10,18 +10,19 @@
 /*----------------------------------\
           %PLACE HOLERS
  \---------------------------------*/
-.main .works button, .main .hero button {
+.main .hero button, .main .works button {
   font-size: 2rem;
   font-weight: 400;
   padding: 1em 3em;
   background-color: #8745BE;
+  background-image: -webkit-gradient(linear, left top, right top, from(#9745BE), to(#6F06C6));
   background-image: linear-gradient(90deg, #9745BE 0%, #6F06C6 100%);
   color: #FFFFFF;
   border: none;
   border-radius: 20px;
 }
 
-footer .logo, header .logo {
+header .logo, footer .logo {
   width: 150px;
 }
 
@@ -30,51 +31,74 @@ header {
   height: 80px;
   background-color: #C4C4C4;
   position: fixed;
+  z-index: 5;
 }
+
 header .header__container {
   width: 90%;
   height: 100%;
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 header .logo {
   padding: 0 1em;
 }
+
 header .nav__container {
   display: none;
 }
-header .mobile-menu .lbl-menu .spn1, header .mobile-menu .spn2, header .mobile-menu .spn3 {
+
+header .mobile-menu .lbl-menu .spn1,
+header .mobile-menu .spn2,
+header .mobile-menu .spn3 {
   position: relative;
   background: #0E0E0E;
   width: 30px;
   height: 3px;
   border-radius: 5px;
+  -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
+
 header .mobile-menu .spn2 {
   margin: 5px 0;
 }
+
 header .menu-check {
   display: none;
 }
+
 header .menu-check:checked ~ .mobile-menu {
-  z-index: 3;
+  z-index: 6;
 }
+
 header .menu-check:checked ~ .mobile-menu .lbl-menu .spn1 {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
   top: 6px;
   background: #070617;
 }
+
 header .menu-check:checked ~ .mobile-menu .lbl-menu .spn2 {
   opacity: 0;
 }
+
 header .menu-check:checked ~ .mobile-menu .lbl-menu .spn3 {
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
   top: -10px;
   background: #070617;
 }
+
 header .menu-check:checked ~ .nav__container {
   display: block;
   position: absolute;
@@ -85,35 +109,48 @@ header .menu-check:checked ~ .nav__container {
   background-color: #E5E5E5;
   border-radius: 0 0 35% 35%;
 }
+
 header .menu-check:checked ~ .nav__container .menu .menu__container {
   list-style: none;
   width: 80%;
   margin: 6em auto 4em;
 }
+
 header .menu-check:checked ~ .nav__container .menu .menu__container__item {
   padding: 1em 0;
   background: #FFFFFF;
   border: none;
 }
+
 header .menu-check:checked ~ .nav__container .menu .menu__container__item:first-child {
   border-radius: 30px 30px 0 0;
 }
+
 header .menu-check:checked ~ .nav__container .menu .menu__container__item:last-child {
   border-radius: 0 0 30px 30px;
 }
+
 header .menu-check:checked ~ .nav__container .menu .menu__container__item a {
   text-decoration: none;
   color: #0E0E0E;
   font-size: 2rem;
   font-weight: 700;
 }
+
 header .menu-check:checked ~ .nav__container .checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 5em;
-  z-index: 3;
+  z-index: 7;
 }
+
 header .menu-check:checked ~ .nav__container .checkbox .checkbox__btn-swtich {
   position: relative;
   display: inline-block;
@@ -123,6 +160,7 @@ header .menu-check:checked ~ .nav__container .checkbox .checkbox__btn-swtich {
   width: 60px;
   height: 30px;
 }
+
 header .menu-check:checked ~ .nav__container .checkbox .checkbox__btn-swtich label:after {
   content: "";
   position: absolute;
@@ -132,20 +170,26 @@ header .menu-check:checked ~ .nav__container .checkbox .checkbox__btn-swtich lab
   border-radius: 100%;
   left: 5px;
   top: 5;
+  -webkit-transition: all 700ms ease;
   transition: all 700ms ease;
 }
+
 header .menu-check:checked ~ .nav__container .checkbox .checkbox__switch {
   font-size: 2.6rem;
   font-weight: 900;
   margin-right: 30px;
 }
+
 header .menu-check:checked ~ .nav__container .checkbox .checkbox__input {
   display: none;
 }
+
 header .menu-check:checked ~ .nav__container .checkbox .checkbox__input:checked ~ label:after {
   background-color: #080326;
-  transform: translate(30px);
+  -webkit-transform: translate(30px);
+          transform: translate(30px);
 }
+
 header .menu-check:checked ~ .nav__container .black-background {
   position: absolute;
   bottom: -200%;
@@ -161,15 +205,41 @@ header .menu-check:checked ~ .nav__container .black-background {
   margin: auto;
   background-color: #E5E5E5;
 }
+
+.main .svg__hero {
+  display: none;
+  position: absolute;
+  top: -15%;
+  z-index: 0;
+  width: 100vw;
+}
+
+.main .svg__hero--mobile {
+  top: calc(50% - 140vw);
+  display: block;
+  position: absolute;
+  width: 200vw;
+  left: calc(50% - 100vw);
+}
+
 .main .hero {
+  position: relative;
+  z-index: 2;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 25%;
   height: 100vh;
-  background-color: #C4C4C4;
 }
+
 .main .hero__title {
   font-size: 4rem;
   font-weight: 900;
@@ -177,6 +247,7 @@ header .menu-check:checked ~ .nav__container .black-background {
   text-align: center;
   margin: 0.5em 5%;
 }
+
 .main .hero .search {
   padding-left: 1.5em;
   font-size: 2rem;
@@ -188,35 +259,50 @@ header .menu-check:checked ~ .nav__container .black-background {
   outline: none;
   border-radius: 100px;
 }
-.main .hero ul, .main .hero li {
+
+.main .hero ul,
+.main .hero li {
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.5rem;
   margin-bottom: 5px;
 }
+
 .main .hero button {
   margin: 1em 0 1em 0;
 }
+
 .main .dataContainer {
   width: 100%;
 }
+
 .main .works {
   width: 85%;
   margin: 0 auto;
   padding: 10em 0;
   border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #E5E5E5;
 }
+
 .main .works__container {
   text-align: center;
 }
+
 .main .works__container .works__title {
   font-size: 3rem;
   margin-bottom: 1em;
 }
+
 .main .works__container .works__details {
   font-size: 2rem;
   font-weight: 700;
@@ -225,19 +311,29 @@ header .menu-check:checked ~ .nav__container .black-background {
   line-height: 3rem;
   text-align: left;
 }
+
 .main .works .code {
   text-align: center;
   margin: 3em auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .main .works .code__title {
   font-size: 2.4rem;
   color: #525252;
   margin-bottom: 1em;
   text-align: left;
 }
+
 .main .works .code__details {
   width: 80%;
   max-width: 580px;
@@ -248,37 +344,55 @@ header .menu-check:checked ~ .nav__container .black-background {
   padding: 30px;
   border-radius: 15px;
 }
+
 .main .whatIs {
   width: 85%;
   margin: 0 auto;
   padding: 10em 0;
   border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #E5E5E5;
 }
+
 .main .whatIs__title {
   width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 5em;
 }
+
 .main .whatIs__title--item {
   height: 80px;
   width: 45%;
   padding: 10px 0 20px 5px;
-  border-bottom: 8px solid #A5A5A5;
+  border-bottom: 8px solid #a5a5a5;
 }
+
 .main .whatIs__title--item h2 {
   font-size: 3rem;
-  color: #A5A5A5;
+  color: #a5a5a5;
 }
+
 .main .whatIs__container {
   text-align: center;
   margin: 2em 0 1em 0;
 }
+
 .main .whatIs__container--details {
   font-size: 2rem;
   font-weight: 700;
@@ -288,13 +402,16 @@ header .menu-check:checked ~ .nav__container .black-background {
   text-align: left;
   margin-bottom: 1em;
 }
+
 .main .whatIs__container--code {
   font-size: 2rem;
   color: #FF7C03;
 }
+
 .main .whatIs .activeTitle {
   border-bottom: 8px solid #540298;
 }
+
 .main .whatIs .activeTitle h2 {
   color: #0E0E0E;
 }
@@ -303,34 +420,57 @@ footer {
   width: 100vw;
   margin: auto;
   background-color: #C4C4C4;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 footer .team {
   width: 85%;
   margin: 0 auto;
   padding: 10em 0;
   border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 2em 0 2em 0;
 }
+
 footer .team .member {
   margin: 1em 0 3em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 footer .team .member__img {
   border-radius: 50%;
   width: 90px;
   height: 90px;
   margin-right: 30px;
 }
+
 footer .team .member__data--title {
   font-size: 2.6rem;
 }
+
 footer .team .member__data--details {
   font-size: 2rem;
   font-weight: 700;
@@ -340,6 +480,7 @@ footer .team .member__data--details {
   text-align: left;
   margin: 0.3em 0 0.3em 0;
 }
+
 footer .team .member__data .socialMedia .fab {
   color: white;
   font-size: 2.4rem;
@@ -352,24 +493,31 @@ footer .team .member__data .socialMedia .fab {
 body.dark h1, body.dark h2, body.dark h3 {
   color: #FFFFFF;
 }
+
 body.dark header {
   background-color: #01000E;
 }
+
 body.dark header .mobile-menu .lbl-menu .spn1, body.dark header .mobile-menu .spn2, body.dark header .mobile-menu .spn3 {
   background: #FFFFFF;
 }
+
 body.dark .hero {
   background-color: #01000E;
 }
+
 body.dark .hero ul, body.dark .hero li {
   color: #FFFFFF;
 }
+
 body.dark main {
   background-color: #070617;
 }
+
 body.dark main .works {
   background-color: #070617;
 }
+
 body.dark main .works .works__details {
   font-size: 2rem;
   font-weight: 700;
@@ -378,12 +526,15 @@ body.dark main .works .works__details {
   line-height: 3rem;
   text-align: left;
 }
+
 body.dark main .works .code__details {
   background-color: #040212;
 }
+
 body.dark main .whatIs {
   background-color: #070617;
 }
+
 body.dark main .whatIs__container--details {
   font-size: 2rem;
   font-weight: 700;
@@ -392,9 +543,11 @@ body.dark main .whatIs__container--details {
   line-height: 3rem;
   text-align: left;
 }
+
 body.dark main .whatIs .activeTitle h2 {
   color: #FFFFFF;
 }
+
 body.dark footer {
   background-color: #01000E;
 }
@@ -417,5 +570,4 @@ h2,
 h3 {
   color: #0E0E0E;
 }
-
 /*# sourceMappingURL=main.css.map */
