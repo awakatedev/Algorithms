@@ -1,5 +1,5 @@
 /*---------------------------\
-         DESKTOP
+            DESKTOP
 \---------------------------*/
 /*---------------------------\
         $VARIABLES
@@ -12,7 +12,7 @@
  \---------------------------------*/
 body {
   /*--------------------------\
-             Global
+  Global
   \--------------------------*/
   overflow-x: hidden;
 }
@@ -73,9 +73,7 @@ body {
     margin: 0 2rem;
   }
   body .header__container .nav__container .checkbox__btn-switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
+    display: none;
   }
   body .header__container .nav__container .checkbox__btn-switch label {
     position: absolute;
@@ -107,6 +105,14 @@ body {
     transform: translateX(15px);
     -webkit-transform: translateX(15px);
   }
+  body .footer .team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 1rem 2.5rem;
+  }
+  body .footer .team .member {
+    justify-self: center;
+  }
   body .main .hero {
     height: 80vh;
     padding-top: 5%;
@@ -121,14 +127,6 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 4rem 2rem;
-  }
-  body .footer .team {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-gap: 1rem 2.5rem;
-  }
-  body .footer .team .member {
-    justify-self: center;
   }
 }
 

@@ -1,0 +1,11 @@
+.footer {
+    .team {
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(400px, 1fr) );
+        grid-gap: 1rem 2.5rem;
+
+        .member {
+            justify-self: center;
+        }
+    }
+}
